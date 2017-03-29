@@ -1,21 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // components
 import Template from './components/Template';
 import Home from './components/Home';
 import Category from './components/Category';
+import Login from './components/Login';
 
 // Routes
 const routes = (
   <Router>
     <div>
-      <Route path="/" render={({path})=>(
-        <Template>
-          <Route exact path={path} component={Category} />
-          <Route path={path + '/:cate'} component={Category} />
-        </Template>
-      )}/>
+      <Switch>
+        <Route exact path="/" render={()=><Template><Home/></Template>}/>
+        <Route path="/customer/account/login" render={()=><Template><Login/></Template>}/>
+        <Route path="/:cate" render={({match})=><Template><Category cate={match.params.cate}/></Template>}/>
+      </Switch>
     </div>
   </Router>
 );

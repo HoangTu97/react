@@ -55,7 +55,7 @@ class Category extends Component {
                 <span className="fa fa-angle-right"></span>
               </li>
               <li className="category22">
-                <strong>Lingerie</strong>
+                <strong>{this.props.cate}</strong>
               </li>
             </ul>
           </div>
@@ -71,7 +71,7 @@ class Category extends Component {
                     <AjaxLoginError />
 
                     <div className="page-title category-title">
-                      <h1>Lingerie</h1>
+                      <h1>{this.props.cate.toUpperCase()}</h1>
                     </div>
                     <div className="category-products">
                       <div className="toolbar">

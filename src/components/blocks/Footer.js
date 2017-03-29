@@ -1,4 +1,7 @@
 import React , { Component } from 'react';
+import { Link } from 'react-router-dom';
+
+import URL from '../../config';
 
 class Footer extends Component {
 
@@ -34,7 +37,7 @@ class Footer extends Component {
                   <div className="footer-cols-wrapper">
                     <div className="footer-col">
                       <div className="footer_logo">
-                        <a href="https://livedemo00.template-help.com/magento_55583/"><img src="./public/img/logo.png" alt=""/></a>
+                        <Link to=""><img src={URL+"/public/img/logo.png"} alt=""/></Link>
                         <ul>
                           <li><a href="https://www.facebook.com/"><span className="fa fa-facebook"></span></a></li>
                           <li><a href="https://www.twitter.com/"><span className="fa fa-twitter"></span></a></li>
